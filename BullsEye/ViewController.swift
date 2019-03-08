@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     var score = 0
     var round = 0
     
-    var audioPlayer: AVAudioPlayer?
+    var fartAudioPlayer: AVAudioPlayer?
+    var dingAudioPlayer: AVAudioPlayer?
+    var ohYeahAudioPlayer: AVAudioPlayer?
 
     
     @IBOutlet weak var slider: UISlider!
@@ -49,14 +51,20 @@ class ViewController: UIViewController {
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
         
         do {
-            if let audioPath = Bundle.main.path(forResource: "fart", ofType: "wav") {
-                let url = URL(fileURLWithPath: audioPath)
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-            } else {
-                print("No file with that name exists")
+            if let fartAudioPath = Bundle.main.path(forResource: "fart", ofType: "wav")  {
+                let urlFart = URL(fileURLWithPath: fartAudioPath)
+                fartAudioPlayer = try AVAudioPlayer(contentsOf: urlFart)
             }
-        } catch let error {
-            print("Can't play the audio file failed with an error \(error.localizedDescription)")
+            if let dingAudioPath = Bundle.main.path(forResource: "ding_ding", ofType: "wav") {
+                let urlDing = URL(fileURLWithPath: dingAudioPath)
+                dingAudioPlayer = try AVAudioPlayer(contentsOf: urlDing)
+            }
+            if let ohYeahAudioPath = Bundle.main.path(forResource: "oh_yeah", ofType: "wav") {
+                let urlOhYeah = URL(fileURLWithPath: ohYeahAudioPath)
+                ohYeahAudioPlayer = try AVAudioPlayer(contentsOf: urlOhYeah)
+            }
+            } catch let error {
+                print("Can't play the audio file failed with an error \(error.localizedDescription)")
         }
         
     }
@@ -64,7 +72,6 @@ class ViewController: UIViewController {
     
     @IBAction func showAlert() {
         
-        audioPlayer?.play()
         
         let difference = abs(targetValue - currentValue) //local
         var points = 100 - difference //local
@@ -75,6 +82,7 @@ class ViewController: UIViewController {
         if difference == 0 {
             title = "Perfect you sonofabitch!"
             points += 100
+            dingAudioPlayer?.play()
         }  else if difference == 1 {
             title = "Just 1 off!"
             points += 50
@@ -82,6 +90,7 @@ class ViewController: UIViewController {
             title = "Close!"
         } else {
             title = "You suck ass"
+            fartAudioPlayer?.play()
         }
         
         // message popup
@@ -118,6 +127,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startNewGame(){
+    ohYeahAudioPlayer?.play()
     round = 0
     score = 0
     startNewRound()
