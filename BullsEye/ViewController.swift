@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
-// TODO: app has bug where it starts up with a value of 0, but it should appear as 50. this happens when the user taps on hit me without moving the slider first
-    
     // these are intance methods
     var currentValue = 0
     var targetValue = 0
     var score = 0
     var round = 0
+    
+    var audioPlayer: AVAudioPlayer?
 
     
     @IBOutlet weak var slider: UISlider!
@@ -47,9 +48,23 @@ class ViewController: UIViewController {
         let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
         
+        do {
+            if let audioPath = Bundle.main.path(forResource: "fart", ofType: "wav") {
+                let url = URL(fileURLWithPath: audioPath)
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+            } else {
+                print("No file with that name exists")
+            }
+        } catch let error {
+            print("Can't play the audio file failed with an error \(error.localizedDescription)")
+        }
+        
     }
 
+    
     @IBAction func showAlert() {
+        
+        audioPlayer?.play()
         
         let difference = abs(targetValue - currentValue) //local
         var points = 100 - difference //local
@@ -106,7 +121,12 @@ class ViewController: UIViewController {
     round = 0
     score = 0
     startNewRound()
+    //Transition BS
+    let transition = CATransition()
+    transition.type = CATransitionType.fade
+    transition.duration = 1
+    transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        view.layer.add(transition, forKey: nil)
     }
-   
-}
 
+}

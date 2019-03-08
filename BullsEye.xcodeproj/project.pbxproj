@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BA81D9B2232E1B70075E2BE /* fart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BA81D982232E1B70075E2BE /* fart.wav */; };
+		5BA81D9C2232E1B70075E2BE /* ding_ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BA81D992232E1B70075E2BE /* ding_ding.wav */; };
+		5BA81D9D2232E1B70075E2BE /* oh_yeah.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BA81D9A2232E1B70075E2BE /* oh_yeah.wav */; };
 		EA4A3993221687E400E4E68B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A3992221687E400E4E68B /* AboutViewController.swift */; };
 		EA4A399522168B2C00E4E68B /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A399422168B2C00E4E68B /* AuthorViewController.swift */; };
 		EA4A399722191A2400E4E68B /* appfile.html in Resources */ = {isa = PBXBuildFile; fileRef = EA4A399622191A2400E4E68B /* appfile.html */; };
@@ -15,10 +18,12 @@
 		EAF1CA1E22112CA300A39562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF1CA1C22112CA300A39562 /* Main.storyboard */; };
 		EAF1CA2022112CA500A39562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF1CA1F22112CA500A39562 /* Assets.xcassets */; };
 		EAF1CA2322112CA500A39562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF1CA2122112CA500A39562 /* LaunchScreen.storyboard */; };
-		EAF1CA2D2211314C00A39562 /* tony2.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1CA2C2211314C00A39562 /* tony2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BA81D982232E1B70075E2BE /* fart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fart.wav; sourceTree = "<group>"; };
+		5BA81D992232E1B70075E2BE /* ding_ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding_ding.wav; sourceTree = "<group>"; };
+		5BA81D9A2232E1B70075E2BE /* oh_yeah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = oh_yeah.wav; sourceTree = "<group>"; };
 		EA4A3992221687E400E4E68B /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		EA4A399422168B2C00E4E68B /* AuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
 		EA4A399622191A2400E4E68B /* appfile.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = appfile.html; sourceTree = "<group>"; };
@@ -29,7 +34,6 @@
 		EAF1CA1F22112CA500A39562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAF1CA2222112CA500A39562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAF1CA2422112CA500A39562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAF1CA2C2211314C00A39562 /* tony2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tony2.png; path = ../../../Pictures/tony2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,6 @@
 		EAF1CA0C22112CA300A39562 = {
 			isa = PBXGroup;
 			children = (
-				EAF1CA2C2211314C00A39562 /* tony2.png */,
 				EAF1CA1722112CA300A39562 /* BullsEye */,
 				EAF1CA1622112CA300A39562 /* Products */,
 			);
@@ -63,6 +66,9 @@
 		EAF1CA1722112CA300A39562 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				5BA81D992232E1B70075E2BE /* ding_ding.wav */,
+				5BA81D982232E1B70075E2BE /* fart.wav */,
+				5BA81D9A2232E1B70075E2BE /* oh_yeah.wav */,
 				EAF1CA1822112CA300A39562 /* AppDelegate.swift */,
 				EAF1CA1A22112CA300A39562 /* ViewController.swift */,
 				EA4A3992221687E400E4E68B /* AboutViewController.swift */,
@@ -134,10 +140,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF1CA2D2211314C00A39562 /* tony2.png in Resources */,
+				5BA81D9B2232E1B70075E2BE /* fart.wav in Resources */,
 				EAF1CA2322112CA500A39562 /* LaunchScreen.storyboard in Resources */,
 				EA4A399722191A2400E4E68B /* appfile.html in Resources */,
 				EAF1CA2022112CA500A39562 /* Assets.xcassets in Resources */,
+				5BA81D9D2232E1B70075E2BE /* oh_yeah.wav in Resources */,
+				5BA81D9C2232E1B70075E2BE /* ding_ding.wav in Resources */,
 				EAF1CA1E22112CA300A39562 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMX5P29HH6;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMX5P29HH6;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
